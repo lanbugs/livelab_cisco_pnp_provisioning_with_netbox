@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pnp xmlns="urn:cisco:pnp" version="1.0" udi="{{ udi }}">
+    <request correlator="{{ correlator }}" xmlns="urn:cisco:pnp:config-upgrade">
+        <config details="all">
+            <copy>
+                <source>
+                    <location>{{ location }}</location>
+                </source>
+            </copy>
+        </config>
+        {% if reload_delay is defined %}
+        <reload>
+            <reason>pnp device config</reason>
+            <delayIn>{{ reload_delay }}</delayIn>
+            <user>pnp-device-config</user>
+            <saveConfig>true</saveConfig>
+        </reload>
+        {% else %}
+            <noReload/>
+        {% endif %}
+    </request>
+</pnp>

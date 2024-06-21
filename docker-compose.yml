@@ -1,0 +1,12 @@
+---
+version: '3.8'
+
+services:
+  cisco_pnp_middleware:
+    image: cisco_pnp_middleware:1.12
+    build:
+      dockerfile: Dockerfile
+    env_file:
+      - ./env
+    ports:
+      - '2222:2222'

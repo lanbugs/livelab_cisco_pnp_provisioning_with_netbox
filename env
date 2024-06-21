@@ -1,0 +1,14 @@
+# netbox url
+APP_NETBOX_URL=http://10.62.4.5:8000
+
+# netbox api token with R/W
+APP_NETBOX_TOKEN=80cba4ba7d171b679db7c03e026196192bfa7223
+
+# enable secure config
+APP_SEC_CONFIG=true
+APP_SEC_KEY=87f8s7f896f7987d89698sdd89as7fsd
+APP_SEC_AGE=7200
+
+# pnp config ip and port
+APP_PNP_IP=10.62.4.5
+APP_PNP_PORT=2222
